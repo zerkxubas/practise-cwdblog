@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::table('posts', function (Blueprint $table) {
             //
             $table->softDeletes();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
         });
     }
 
