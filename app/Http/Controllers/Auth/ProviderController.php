@@ -18,6 +18,9 @@ class ProviderController extends Controller
             return Socialite::driver("github")->redirect();
         } elseif ($provider == "google") {
             return Socialite::driver("google")->redirect();
+        // } else {
+        } elseif ($provider == "facebook") {
+            return Socialite::driver("facebook")->redirect();
         } else {
             abort(403, "We dont allow this.");
         }
@@ -37,6 +40,7 @@ class ProviderController extends Controller
                 }
                 // User exists with the same provider, log them in
                 Auth::login($checkUser);
+                return redirect('/dashboard');
             } else {
                 $user = User::updateOrCreate([
                     'provider_id' => $socialUser->id,
