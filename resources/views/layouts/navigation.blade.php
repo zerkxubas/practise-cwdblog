@@ -16,6 +16,9 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                        {{ __('View Picture') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('user.create')" :active="request()->routeIs('user.create')">
                         {{ __('Picture Upload') }}
                     </x-nav-link>
                 </div>

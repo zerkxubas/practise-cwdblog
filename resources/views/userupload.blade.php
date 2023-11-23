@@ -6,10 +6,10 @@
     </x-slot>
 
     @if (session('success'))
-        <div class="py-12">
-            <div class="mx-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm">
-                    <div class="p-6 text-green-700">
+        <div class="mt-10">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-green-200 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-green-900">
                         {{ session('success') }}
                     </div>
                 </div>
@@ -17,10 +17,10 @@
         </div>
     @endif
     @if (session('error'))
-        <div class="py-12">
-            <div class="mx-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm">
-                    <div class="p-6 text-red-700">
+        <div class="mt-10">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-red-200 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-red-900">
                         {{ session('error') }}
                     </div>
                 </div>
@@ -31,6 +31,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+
                 <div class="p-6 text-gray-900">
                     @error('picture')
                         <p class="text-red-600">{{ $message }}</p>
